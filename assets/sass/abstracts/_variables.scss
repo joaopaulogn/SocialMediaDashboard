@@ -1,0 +1,62 @@
+// COLORS
+html {
+    --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --twitter: hsl(203, 89%, 53%);
+    --facebook: hsl(195, 100%, 50%);
+    --youtube: hsl(348, 97%, 39%);
+    --card: hsl(227, 47%, 96%);
+    --text: hsl(228, 12%, 44%);
+    --switch: hsl(230, 22%, 74%);
+    --switch-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --header: hsl(225, 100%, 98%);
+    --bg: hsl(0, 0%, 100%);
+    --main-text: hsl(230, 17%, 14%);
+}
+
+// LENGHTS
+$default: 2.5rem;
+$smallest: 1.5rem;
+$small: 2rem;
+$medium: 5rem;
+$large: 10rem;
+
+// COMPONENTS
+$card-height-large: 22rem;
+$card-height-medium: 20rem;
+$card-height-small: 12.5rem;
+$card-height-smallest: 10rem;
+
+$switch-height-small: 2rem;
+$switch-width-small: 4rem;
+
+// TYPOGRAPHY
+$h1-large: 2.8rem;
+$h1-medium: 2.4rem;
+$h1-small: 2rem;
+
+$h2-large: 2.2rem;
+$h2-medium: 2rem;
+$h2-small: 1.8rem;
+
+$h3-default: 1.4rem;
+$h3-small: 1.2rem;
+
+$p-large: 1.4rem;
+$p-medium: 1.2rem;
+$p-small: 1rem;
+
+$span-large: 5.5rem;
+$span-medium: 4.5rem;
+$span-small: 3.5rem;
+$span-smallest: 3rem;
+
+// BREAKPOINTS
+$mobile-sm: 375px;
+$mobile-md: 500px;
+
+$tablet-sm: 700px;
+$tablet-md: 1024px;
+
+$desktop-sm: 1280px;
+$desktop-md: 1440px;
+$desktop-lg: 1600px;

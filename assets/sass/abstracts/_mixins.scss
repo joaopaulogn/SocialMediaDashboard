@@ -1,0 +1,23 @@
+@mixin alignContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin cardDarken {
+    transform: translateY(-0.5rem);
+    background-color: darken(hsl(227, 47%, 96%), 4%);
+}
+
+@mixin cardLighten {
+    background-color: lighten(hsl(228, 28%, 20%), 4%);
+}
+
+@mixin switchDark {
+    background-image: var(--switch-dark);
+
+    &::before {
+        background-color: hsl(230, 17%, 14%);
+        transform: translateX(1.7rem);
+    }
+}

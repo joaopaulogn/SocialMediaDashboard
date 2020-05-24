@@ -1,0 +1,41 @@
+{
+  "name": "social-media-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Social Media Dashboard from Frontend Mentor",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopaulogn/frontend-mentor-social-media-dashboard.git"
+  },
+  "keywords": [
+    "Frontend-Mentor",
+    "Dashboard",
+    "Social-Media"
+  ],
+  "author": "João Paulo Gonçalves Neto",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/joaopaulogn/frontend-mentor-social-media-dashboard/blob/master/LICENSE"
+    },
+    {
+      "type": "Apache-2.0",
+      "url": "https://github.com/joaopaulogn/frontend-mentor-social-media-dashboard/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/joaopaulogn/frontend-mentor-social-media-dashboard/issues"
+  },
+  "homepage": "https://github.com/joaopaulogn/frontend-mentor-social-media-dashboard#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}

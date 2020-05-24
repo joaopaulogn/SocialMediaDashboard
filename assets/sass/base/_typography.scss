@@ -1,0 +1,50 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.heading-primary {
+    font-size: $h1-small;
+    font-weight: 700;
+    color: var(--main-text);
+    margin-bottom: 0.3rem;
+
+    @media only screen and (min-width: 375px) {
+        font-size: $h1-medium;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        font-size: $h1-large;
+    }
+}
+
+.heading-secondary {
+    font-size: $h2-small;
+    font-weight: 700;
+    color: var(--main-text);
+    margin-bottom: $default;
+
+    @media only screen and (min-width: 375px) {
+        font-size: $h2-medium;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        font-size: $h2-large;
+    }
+}
+
+.heading-tertiary {
+    font-size: $h3-small;
+    color: var(--text);
+
+    @media only screen and (min-width: 375px) {
+        font-size: $h3-default;
+    }
+
+    @media only screen and (min-width: 500px) {
+        font-size: $h3-small;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        font-size: $h3-default;
+    }
+}

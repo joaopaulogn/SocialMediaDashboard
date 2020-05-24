@@ -1,0 +1,103 @@
+.header {
+    padding: 4rem $default 8rem $default;
+    background-color: var(--header);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+    &__text-box {
+        padding-bottom: 3rem;
+        border-bottom: 0.1rem solid var(--text);
+    }
+
+    &__switch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: $smallest;
+
+        &-text {
+            color: var(--text);
+            font-weight: 700;
+            font-size: $p-medium;
+        }
+
+        &-label {
+            width: $switch-width-small;
+            height: $switch-height-small;
+            background-color: var(--switch);
+            border-radius: 2rem;
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                background-color: var(--bg);
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 100%;
+
+                position: absolute;
+                top: 0.2rem;
+                left: 0.4rem;
+                transition: all 0.4s ease-out;
+            }
+
+            &:hover {
+                @include switchDark;
+            }
+
+            &.dark {
+                @include switchDark;
+
+                &:hover {
+                    background-image: initial;
+
+                    &::before {
+                        background-color: hsl(0, 0%, 100%);
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+
+        &-input {
+            visibility: hidden;
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 700px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &__text-box {
+            border-bottom: none;
+        }
+
+        &__switch {
+            margin-top: 0;
+
+            &-label {
+                margin-left: $smallest;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        padding-left: 8.25rem;
+        padding-right: 8.25rem;
+
+        &__switch {
+            &-text {
+                font-size: $p-large;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+        padding-left: 16.5rem;
+        padding-right: 16.5rem;
+    }
+}
