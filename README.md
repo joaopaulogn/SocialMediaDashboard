@@ -1,12 +1,12 @@
 # Frontend Mentor - Social media dashboard with theme switcher
 
- [![License](https://img.shields.io/badge/License-Apache%202.0-red.svg)](LICENSE) [![License](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)[![License](https://img.shields.io/badge/VERCEL-passed-green)](VERCEL) 
+ [![License](https://img.shields.io/badge/License-Apache%202.0-red.svg)](LICENSE) [![License](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE) [![License](https://img.shields.io/badge/VERCEL-passed-green)](VERCEL) 
 
-###### ![Design preview for the Social media dashboard with theme switcher coding challenge](./challenge/images/desktop-preview.jpg)
+###### ![Design preview for the Social media dashboard with theme switcher](challenge/images/desktop-preview.jpg)
 
 
 
-![mobile-design-light](C:\Users\joaop\Documents\VSCode\Social Media Dashboard (Project)\design\mobile-design-light.jpg) ![mobile-design-light](C:\Users\joaop\Documents\VSCode\Social Media Dashboard (Project)\design\mobile-design-dark.jpg)
+![mobile-design-light](challenge/images/mobile-preview-light.jpg) ![mobile-design-dark](challenge/images/mobile-preview-dark.jpg)
 
 
 
