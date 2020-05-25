@@ -9,7 +9,7 @@ const browserSync = require('browser-sync');
 gulp.task('sass', () => {
     return gulp.src('./assets/sass/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./assets/css'));
+        .pipe(gulp.dest('./assets/css/'));
 });
 
 // Minify CSS
@@ -28,10 +28,9 @@ gulp.task('watch', () => {
             baseDir: './'
         }
     });
-    gulp.watch('./assets/sass/**/*.scss', gulp.series('sass'));
-    gulp.watch('./assets/css/main.css', gulp.series('css'));
     gulp.watch('./assets/sass/**/*.scss').on('change', browserSync.reload);
+    gulp.watch('./assets/js/**/*.js').on('change', browserSync.reload);
 });
 
-// Default task, which execute the sass and css tasks
-gulp.task('default', gulp.series('sass', 'css'));
+// Default task which automate the process
+gulp.task('run', gulp.series('sass', 'css', 'watch'));

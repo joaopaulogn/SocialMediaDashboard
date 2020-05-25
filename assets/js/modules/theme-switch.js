@@ -10,9 +10,9 @@ export function getStyles(element, style) {
 };
 
 export default function initThemeSwitch() {
-
     // Elements for DOM manipulation
     const checkbox = document.querySelector('[data-theme="checkbox"]');
+    const events = ['touchstart', 'click', 'change'];
 
     // Function activated by the event
     function handleChange(e) {
@@ -37,5 +37,7 @@ export default function initThemeSwitch() {
     };
 
     // Event listener to watch every change in the checkbox
-    checkbox.addEventListener('change', handleChange);
+    events.forEach(event => {
+        checkbox.addEventListener(event, handleChange);
+    })
 }

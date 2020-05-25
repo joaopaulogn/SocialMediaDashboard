@@ -43,21 +43,8 @@
                 transition: all 0.4s ease-out;
             }
 
-            &:hover {
-                @include switchDark;
-            }
-
             &.dark {
                 @include switchDark;
-
-                &:hover {
-                    background-image: initial;
-
-                    &::before {
-                        background-color: hsl(0, 0%, 100%);
-                        transform: translateX(0);
-                    }
-                }
             }
         }
 
@@ -92,6 +79,27 @@
         &__switch {
             &-text {
                 font-size: $p-large;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1280px) {
+        &__switch {
+            &-label {
+                &:hover {
+                    @include switchDark;
+                }
+
+                &.dark {
+                    &:hover {
+                        background-image: initial;
+
+                        &::before {
+                            background-color: hsl(0, 0%, 100%);
+                            transform: translateX(0);
+                        }
+                    }
+                }
             }
         }
     }
