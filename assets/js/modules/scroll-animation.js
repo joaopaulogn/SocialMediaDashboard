@@ -4,7 +4,7 @@ import { cards } from "./_constants.js";
 export default function initScrollAnimation() {
 
     // 87% percent of the page height
-    const windowHeight = window.innerHeight * 0.87;
+    const windowHeight = window.innerHeight * 0.9;
     const classActive = 'active';
 
     if (window.innerWidth <= 700) {

@@ -3,6 +3,7 @@
     margin-top: -4rem;
     margin-bottom: $medium;
     z-index: 2;
+    overflow: hidden;
     
     &__container {
         display: flex;
@@ -104,6 +105,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: $default;
         margin-bottom: $large;
+        overflow: visible;
 
         &__container {
             &:not(:last-child) {
