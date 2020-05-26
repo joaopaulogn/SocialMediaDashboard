@@ -45,7 +45,7 @@ To view the project recreated by me, visit: https://social-media-dashboard-tau.n
 
    1. `$ npm install`
 
-   2. `$ gulp run`
+   2. `$ gulp watch`
 
       
 

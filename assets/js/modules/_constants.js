@@ -3,7 +3,7 @@ import { getStyles } from './theme-switch.js';
 
 // The DOM elements
 export const html = document.documentElement;
-export const cards = document.querySelectorAll('[data-theme="card"]');
+export const cards = document.querySelectorAll('[data-card]');
 export const label = document.querySelector('[data-theme="switch"]');
 
 // Object which stores the initial colors (light)

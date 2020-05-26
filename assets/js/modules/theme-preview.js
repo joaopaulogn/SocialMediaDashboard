@@ -1,5 +1,5 @@
 // This imports the constants and functions to theme preview to work
-import { darkColors, label, lightColors, theme, html } from './_constants.js';
+import { darkColors, label, lightColors, theme } from './_constants.js';
 import { changeTheme } from './_changes.js';
 
 // Function activated by the event mouseleave
@@ -10,7 +10,7 @@ export function handleLeave() {
 }
 
 export default function initThemePreview() {
-    if (html.clientWidth >= 1280) {
+    if (window.innerWidth >= 1280) {
         // Function activated by the event mouseover
         function handleOver() {
 

@@ -1,23 +1,48 @@
+// Align content
 @mixin alignContent {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-@mixin cardDarken {
+// Hover card in light theme
+@mixin cardLight {
     transform: translateY(-0.5rem);
     background-color: darken(hsl(227, 47%, 96%), 4%);
 }
 
-@mixin cardLighten {
+// Hover card in dark theme
+@mixin cardDark {
     background-color: lighten(hsl(228, 28%, 20%), 4%);
 }
 
+// Dark theme switch
 @mixin switchDark {
     background-image: var(--switch-dark);
 
     &::before {
         background-color: hsl(230, 17%, 14%);
         transform: translateX(1.7rem);
+    }
+}
+
+// Disabled and active states of the card
+@mixin card {
+    @media only screen and (max-width: 500px) {
+        opacity: 0;
+        transition: all 0.8s;
+
+        &:nth-child(odd) {
+            transform: translateX(-8rem);
+        }
+
+        &:nth-child(even) {
+            transform: translateX(8rem);
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

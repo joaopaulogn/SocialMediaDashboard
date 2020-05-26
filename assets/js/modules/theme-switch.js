@@ -1,8 +1,7 @@
 // This imports the constants and functions to theme change to work
 import { changeTheme, changeHover } from './_changes.js';
-import { darkColors, lightColors, label, theme } from './_constants.js';
+import { darkColors, label, theme, lightColors } from './_constants.js';
 import { handleLeave } from './theme-preview.js';
-import { setValueTheme } from './_local-storage.js';
 
 // Function to get computed HTML styles
 export function getStyles(element, style) {
@@ -12,12 +11,12 @@ export function getStyles(element, style) {
 export default function initThemeSwitch() {
     // Elements for DOM manipulation
     const checkbox = document.querySelector('[data-theme="checkbox"]');
-    const events = ['touchstart', 'click', 'change'];
+    const events = ['touchstart', 'change'];
 
     // Function activated by the event
     function handleChange(e) {
 
-        function conditionTheme(colors, hover, classList) {
+        function conditionTheme(colors = darkColors, hover, classList) {
             changeTheme(colors);
             changeHover(hover);
 
@@ -29,10 +28,8 @@ export default function initThemeSwitch() {
         if (e.target.checked) {
             conditionTheme(darkColors, theme.dark, 'add');
             label.removeEventListener('mouseleave', handleLeave);
-            setValueTheme(darkColors);
         } else {
-            conditionTheme(lightColors, theme.light);
-            setValueTheme(lightColors);
+            conditionTheme(lightColors ,theme.light);
         }
     };
 

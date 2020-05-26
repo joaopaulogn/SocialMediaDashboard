@@ -11,6 +11,7 @@
         margin-bottom: $default;
         background-color: var(--card);
         border-radius: 0.5rem;
+        @include card;
     }
 
     &__content {
@@ -79,11 +80,12 @@
             transition: all .2s ease-in-out;
 
             &:hover {
-                @include cardDarken;
+                @include cardLight;
             }
+            
             &.card-dark {
                 &:hover {
-                    @include cardLighten;
+                    @include cardDark;
                 }
             }
         }

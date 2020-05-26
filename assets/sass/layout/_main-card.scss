@@ -13,6 +13,7 @@
         height: $card-height-medium;
         background-color: var(--card);
         border-radius: 0.5rem;
+        @include card;
 
         &:not(:last-child) {
             margin-bottom: $default;
@@ -130,12 +131,12 @@
             transition: all 0.2s ease-in-out;
 
             &:hover {
-                @include cardDarken;
+                @include cardLight;
             }
             
             &.card-dark {
                 &:hover {
-                    @include cardLighten;
+                    @include cardDark;
                 }
             }
         }
