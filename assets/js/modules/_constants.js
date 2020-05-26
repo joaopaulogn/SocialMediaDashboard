@@ -24,7 +24,11 @@ export const darkColors = {
     '--main-text': 'hsl(0, 0%, 100%)',
 };
 
+// Constant which stores the class for theme switch
 export const theme = {
     dark: 'dark',
     light: 'light',
 }
+
+// Constant which store the class to activate the cards
+export const active = 'active';

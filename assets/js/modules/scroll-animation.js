@@ -1,15 +1,32 @@
 // Import all the cards of the page
-import { cards } from "./_constants.js";
+import { cards, active } from "./_constants.js";
 
 export default function initScrollAnimation() {
 
     // 87% percent of the page height
     const windowHeight = window.innerHeight * 0.9;
-    const classActive = 'active';
 
     if (window.innerWidth <= 700) {
 
-         // Function activated by the event
+        // Function which watchs any change on the card penultimate
+        function mutationElement() {
+            function handleMutation(mutation) {
+                const element = mutation[0].target;
+                if (element.classList.contains(active)) {
+                    element.nextElementSibling.classList.add(active);
+                }
+            };
+
+            // Element to be observed
+            const observerTarget = cards[10];
+            const observer = new MutationObserver(handleMutation);
+
+            // Element properties to be watch
+            observer.observe(observerTarget, { attributes: true });
+        };
+        mutationElement();
+
+        // Function activated by the event
         function handleScroll() {
             cards.forEach(card => {
                 // Top of each card
@@ -18,13 +35,12 @@ export default function initScrollAnimation() {
                 const conditionToVisible = (topElement - windowHeight) < 0;
 
                 if (conditionToVisible) {
-                    card.classList.add(classActive);
-                } else {
-                    card.classList.remove(classActive);
+                    card.classList.add(active);
+                } else if (card.classList.contains(active)) {
+                    card.classList.remove(active);
                 }
             })
         }
-
         handleScroll();
 
         // Event listener which check if has scroll on the page
