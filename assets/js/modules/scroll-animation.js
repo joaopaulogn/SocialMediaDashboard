@@ -18,7 +18,7 @@ export default function initScrollAnimation() {
             };
 
             // Element to be observed
-            const observerTarget = cards[10];
+            const observerTarget = cards[cards.length - 2];
             const observer = new MutationObserver(handleMutation);
 
             // Element properties to be watch
@@ -40,7 +40,7 @@ export default function initScrollAnimation() {
                     card.classList.remove(active);
                 }
             })
-        }
+        };
         handleScroll();
 
         // Event listener which check if has scroll on the page
